@@ -8,9 +8,8 @@ public class FutureProximityAdjuster implements TimePointAdjuster {
 	TimePoint[] timePoints; //sorted
 
 	public FutureProximityAdjuster(TimePoint[] points) {
-		TimePoint[] arrayTemp = Arrays.copy(points);
-		Arrays.bubbleSort(arrayTemp, Comparator.naturalOrder());
-		this.timePoints = arrayTemp;
+		timePoints = Arrays.copy(points);
+		Arrays.bubbleSort(timePoints);
 	}
 
 	@Override
